@@ -10,7 +10,8 @@
     "build:analyze": "cross-env NODE_ENV=production webpack --analyze",
     "deploy": "gh-pages -d dist",
     "clear": "yarn cmd clean",
-    "deploy:firebase": "firebase deploy"
+    "deploy:firebase": "firebase deploy",
+    "generate": "node generate-sitemap.js"
   },
   "dependencies": {
     "cross-env": "7.0.3",
@@ -48,6 +49,7 @@
     "prettier": "^3.1.0",
     "resolve-url-loader": "^5.0.0",
     "sass-loader": "^16.0.1",
+    "sitemap": "^8.0.0",
     "style-loader": "^4.0.0",
     "webpack": "^5.94.0",
     "webpack-cli": "^5.1.4",

@@ -59,14 +59,14 @@ const getStyleLoaders = (cssOptions, preProcessor) => {
 
   if (preProcessor) {
     loaders.push(
-      {
-        loader: 'resolve-url-loader',
-        options: { sourceMap: shouldUseSourceMap, root: getAppSrc() },
-      },
-      {
-        loader: preProcessor,
-        options: { sourceMap: shouldUseSourceMap },
-      },
+        {
+          loader: 'resolve-url-loader',
+          options: { sourceMap: shouldUseSourceMap, root: getAppSrc() },
+        },
+        {
+          loader: preProcessor,
+          options: { sourceMap: shouldUseSourceMap },
+        },
     );
   }
 
@@ -136,24 +136,24 @@ module.exports = {
             test: sassRegex,
             exclude: sassModuleRegex,
             use: getStyleLoaders(
-              {
-                importLoaders: 3,
-                sourceMap: shouldUseSourceMap,
-                modules: { mode: 'icss' },
-              },
-              'sass-loader',
+                {
+                  importLoaders: 3,
+                  sourceMap: shouldUseSourceMap,
+                  modules: { mode: 'icss' },
+                },
+                'sass-loader',
             ),
             sideEffects: true,
           },
           {
             test: sassModuleRegex,
             use: getStyleLoaders(
-              {
-                importLoaders: 3,
-                sourceMap: shouldUseSourceMap,
-                modules: { mode: 'local', localIdentName: '[name]__[local]___[hash:base64:5]' },
-              },
-              'sass-loader',
+                {
+                  importLoaders: 3,
+                  sourceMap: shouldUseSourceMap,
+                  modules: { mode: 'local', localIdentName: '[name]__[local]___[hash:base64:5]' },
+                },
+                'sass-loader',
             ),
           },
           {
@@ -192,12 +192,19 @@ module.exports = {
       patterns: [
         { from: resolveSrc('public/images'), to: 'public/images' },
         { from: resolveSrc('public/favicon'), to: 'public/favicon' },
+        { from: resolveSrc('public/robots.txt'), to: 'robots.txt' },
+        { from: resolveSrc('public/sitemap.xml'), to: 'sitemap.xml' },
       ],
     }),
     new HtmlWebpackPlugin({
       template: './src/index.html',
       filename: 'index.html',
-      minify: true,
+      minify: {
+        collapseWhitespace: false,
+        removeComments: false,
+        removeRedundantAttributes: false,
+        useShortDoctype: false,
+      },
       inject: 'body',
     }),
     new WebpackManifestPlugin(),

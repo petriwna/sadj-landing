@@ -13,7 +13,7 @@ export class Form {
     this.wareInput = this.form.querySelector('.ware');
     this.wareInput.value = this.wareInput.value
       ? this.wareInput.value
-      : 'Утятниця (гусятниця) 5 л з кришкою - сковородою Сітон';
+      : 'Сковорода 26х6 чавунна з дерев\'яною ручкою та скляною кришкою (сотейник) Сітон';
     this.setupEventListeners();
   }
 

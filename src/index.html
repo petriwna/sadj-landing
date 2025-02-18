@@ -30,6 +30,8 @@
   <meta property="og:image" content="https://saucepan-did-mazaj.web.app/public/images/hero-2.jpg">
   <meta property="og:site_name" content="Сковорода чавунна з дерев'яною ручкою та скляною кришкою Сітон.">
   <meta property="og:locale" content="uk_UA">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
 
   <!-- Twitter Cards (для X/Twitter, може працювати і в Instagram) -->
   <meta name="twitter:card" content="summary_large_image">
@@ -38,8 +40,6 @@
   <meta name="twitter:image" content="https://saucepan-did-mazaj.web.app/public/images/hero-2.jpg">
 
   <!-- Додаткові мета-теги для Instagram -->
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
   <meta name="instagram:card" content="summary_large_image">
   <meta name="instagram:title" content="Сковорода чавунна з дерев'яною ручкою та скляною кришкою Сітон – Акційна ціна.">
   <meta name="instagram:description" content="Сковорода чавунна з дерев'яною ручкою та скляною кришкою Сітон. Сковорода виконана з литого чавуну, має товсті стінки та дно, сприяє рівномірному приготуванню страв без пригорання. Акційна ціна, обмежена кількість товару!">
@@ -66,18 +66,18 @@
 </head>
 <body>
 <div class="container">
-  <header class="header">
-    <div class="header__made">
-      <h1 class="header__title">Made in Ukraine</h1>
-    </div>
-    <div class="header__marquee-container marquee-container">
-      <div class="marquee-container__marquee">
-        КІЛЬКІСТЬ ТОВАРУ ПО АКЦІЇ ОБМЕЖЕНА</div>
-    </div>
+  <header class="header-hidden visually-hidden">
+    <h1>Сковорода чавунна з дерев'яною ручкою та скляною кришкою Сітон</h1>
   </header>
   <main class="main">
+    <section class="main__header header">
+      <div class="header__marquee-container marquee-container">
+        <div class="marquee-container__marquee">
+          КІЛЬКІСТЬ ТОВАРУ ПО АКЦІЇ ОБМЕЖЕНА</div>
+      </div>
+    </section>
     <section class="hero">
-      <img class="hero__image" src="public/images/hero-2.jpg" alt="">
+      <img class="hero__image" src="public/images/frying-hero.png" alt="">
     </section>
     <section class="benefits">
       <div class="benefits__item">
@@ -108,11 +108,11 @@
     <section class="price">
       <div class="price__item">
         <p class="price__text">Звичайна ціна:</p>
-        <p class="price__value-old">2 500 грн.</p>
+        <p class="price__value-old">1 200 грн.</p>
       </div>
       <div class="price__item  price__item--new">
         <p class="price__text">Акційна ціна:</p>
-        <p class="price__value-new">1 599 грн.</p>
+        <p class="price__value-new">999 грн.</p>
       </div>
     </section>
     <section class="counter">
@@ -122,7 +122,7 @@
         </button>
       </div>
       <div class="counter__text">
-        <p>* залишилось <span>18</span> шт по акції</p>
+        <p>* залишилось <span>16</span> шт по акції</p>
       </div>
       <div class="counter__clock-container">
         <h4 class="counter__text counter__text ">До кінця акції залишилось:</h4>
@@ -150,28 +150,28 @@
       <h2 class="features__title"><span class="accent">Характеристики:</span></h2>
       <ul class="features__list">
         <li class="features__item">
-          <svg class='features__icon' width='24' height='24'>
+           <svg class='features__icon' width='24' height='24'>
             <use href='public/images/icon.svg#icon-done'></use>
           </svg>
-          <p>Об'єм 5 літрів</p>
+          <p>Верхній діаметр посуду	26 см</p>
         </li>
         <li class="features__item">
            <svg class='features__icon' width='24' height='24'>
             <use href='public/images/icon.svg#icon-done'></use>
           </svg>
-          <p>Розмір 320х200х130</p>
+          <p>Висота стінок	6 см</p>
         </li>
         <li class="features__item">
            <svg class='features__icon' width='24' height='24'>
             <use href='public/images/icon.svg#icon-done'></use>
           </svg>
-          <p>Висота 130</p>
+          <p>Вага 2,2 кг</p>
         </li>
         <li class="features__item">
            <svg class='features__icon' width='24' height='24'>
             <use href='public/images/icon.svg#icon-done'></use>
           </svg>
-          <p>Вага 3,4 кг</p>
+          <p>Матеріал ручки	- дерево</p>
         </li>
         <li class="features__item">
            <svg class='features__icon' width='24' height='24'>
@@ -183,26 +183,20 @@
            <svg class='features__icon' width='24' height='24'>
             <use href='public/images/icon.svg#icon-done'></use>
           </svg>
-          <p>Кришка-сковорода 320х200</p>
-        </li>
-        <li class="features__item">
-           <svg class='features__icon' width='24' height='24'>
-            <use href='public/images/icon.svg#icon-done'></use>
-          </svg>
-          <p>Вага 2,3 кг</p>
-        </li>
-        <li class="features__item">
-           <svg class='features__icon' width='24' height='24'>
-            <use href='public/images/icon.svg#icon-done'></use>
-          </svg>
-          <p>Використання кришки замість сковороди</p>
+          <p>Скляна кришка</p>
         </li>
         <li class="features__item features__item--align">
-          <!--TODO fix icon-->
            <svg class='features__icon' width='28' height='28'>
             <use href='public/images/icon.svg#icon-done'></use>
           </svg>
-          <p>Працюємо офіційно. Оплата на рахунок ФОП або накладений платіж</p>
+          <p>Відправка товару без передоплати</p>
+        </li>
+        <li class="features__item features__item--align">
+           <svg class='features__icon' width='28' height='28'>
+            <use href='public/images/icon.svg#icon-done'></use>
+          </svg>
+          <p>Відправка у день замовлення.
+            Доставка 1 день</p>
         </li>
         <li class="features__item">
            <svg class='features__icon' width='24' height='24'>
@@ -226,10 +220,9 @@
     </div>
 
     <section class="description">
-      <h2 class="description__title accent">гусятниця</h2>
-      <h3 class="description__title description__title--second">з кришкою - сковородою</h3>
+      <h2 class="description__title"><span class="accent">Сковорода</span> чавунна</h2>
       <div class="description__text">
-        <p>Чавунна каструля <span class="accent bolt">ТМ СИТОН</span>
+        <p>Чавунна сковорода <span class="accent bolt">ТМ СИТОН</span>
           є ідеальним варіантом для любителів тушкованих страв, оскільки саме завдяки товстим стінкам зберігається все смакове
           багатство та їх пікантність!
         </p>
@@ -437,16 +430,13 @@
       </div>
     </section>
     <div>
-      <div class="header__made">
-        <h1 class="header__title">Made in Ukraine</h1>
-      </div>
       <div class="header__marquee-container marquee-container">
         <div class="marquee-container__marquee">
           КІЛЬКІСТЬ ТОВАРУ ПО АКЦІЇ ОБМЕЖЕНА</div>
       </div>
     </div>
     <section class="hero">
-      <img class="hero__image" src="public/images/hero-2.jpg" alt="">
+      <img class="hero__image" src="public/images/frying-hero.png" alt="">
 
     </section>
     <section class="benefits">
@@ -478,11 +468,11 @@
     <section class="price">
       <div class="price__item">
         <p class="price__text">Звичайна ціна:</p>
-        <p class="price__value-old">2 500 грн.</p>
+        <p class="price__value-old">1 200 грн.</p>
       </div>
       <div class="price__item  price__item--new">
         <p class="price__text">Акційна ціна:</p>
-        <p class="price__value-new">1 599 грн.</p>
+        <p class="price__value-new">999 грн.</p>
       </div>
     </section>
     <section class="request" id="request">
@@ -501,21 +491,21 @@
               type='text'
               name='request-ware'
               placeholder='Товар'
-              value="Утятниця (гусятниця) 5 л з кришкою - сковородою Сітон"
+              value="Сковорода 26х6 чавунна з дерев'яною ручкою та скляною кришкою (сотейник) Сітон"
               required
             />
           </div>
 
           <div class='request__form-field input'>
           <label class='input__label visually-hidden' for='request-name'
-          >Ім’я</label
+          >Прізвище та ім'я</label
           >
           <input
             class='input__control name'
             id='request-name'
             type='text'
             name='request-name'
-            placeholder='Ім’я'
+            placeholder="Прізвище та ім'я"
             required
           />
         </div>

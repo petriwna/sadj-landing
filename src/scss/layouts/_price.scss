@@ -11,7 +11,7 @@
     width: 50%;
 
     &--new {
-      background: linear-gradient(180deg, #ffb73b 0%, #ff2525 74%);
+      background: var(--color-brand-yellow);
       color: var(--color-primary-white);
     }
   }
