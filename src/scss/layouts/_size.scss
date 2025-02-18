@@ -1,0 +1,26 @@
+.size {
+  margin: 25px 0;
+
+  &__title {
+    margin: 0 0 30px;
+    font-weight: 900;
+    font-size: 27px;
+    line-height: 32px;
+    text-align: center;
+    text-transform: uppercase;
+
+    &::after{
+      display: block;
+      content: "";
+      width: 62px;
+      height: 5px;
+      margin: 15px auto;
+      background: url("../../public/images/separator.png") center center no-repeat;
+    }
+  }
+
+  &__item {
+    display: block;
+    margin: 0 auto 20px;
+  }
+}

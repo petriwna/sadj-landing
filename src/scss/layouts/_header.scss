@@ -1,0 +1,15 @@
+.header {
+  &__title {
+    padding: 15px 20px 18px 20px;
+    text-align: center;
+    font-size: 30px;
+    line-height: 44px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  &__made {
+    background-color: var(--color-secondary-brand);
+    color: var(--color-primary-white);
+  }
+}

@@ -1,0 +1,40 @@
+.order-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-top: 2px solid #ebebeb;
+  padding: 8px;
+
+  &__title {
+    font-size: 22px;
+    font-weight: 700;
+  }
+
+  &__img {
+    height: 150px;
+    width: 150px;
+    background-size: cover;
+    background-position: center;
+
+    &--order {
+      background-image: url("../../public/images/order.png");
+    }
+
+    &--calling {
+      background-image: url("../../public/images/calling.png");
+    }
+
+    &--sending {
+      background-image: url("../../public/images/sending.png");
+    }
+
+    &--delivery {
+      background-image: url("../../public/images/delivery.png");
+    }
+  }
+
+  &__text {
+    text-align: center;
+    font-size: 16px;
+  }
+}

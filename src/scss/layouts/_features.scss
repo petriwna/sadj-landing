@@ -1,0 +1,45 @@
+.features {
+  margin: 25px 40px;
+
+  &__title {
+    margin: 0 0 30px;
+    font-weight: 900;
+    font-size: 27px;
+    line-height: 32px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #20222d;
+
+    &::after{
+      display: block;
+      content: "";
+      width: 62px;
+      height: 5px;
+      margin: 15px auto;
+      background: url("../../public/images/separator.png") center center no-repeat;
+    }
+  }
+
+  &__list {
+    margin: 25px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    &--align {
+      align-items: normal;
+    }
+  }
+
+  &__icon {
+    fill: var(--color-brand-normal);
+  }
+}

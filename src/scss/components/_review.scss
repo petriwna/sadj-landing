@@ -1,0 +1,29 @@
+.review {
+  padding: 10px;
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+  border: 1.34px solid #e7eaec;
+  font-size: 18px;
+
+  &__text {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__name {
+    font-size: 20px;
+    font-weight: 600;
+  }
+
+  &__date {
+    font-size: 16px;
+    color: var(--color-secondary-text);
+  }
+
+  &__icon {
+    fill: #EBB238;
+  }
+
+}
