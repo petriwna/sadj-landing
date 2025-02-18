@@ -185,6 +185,7 @@ module.exports = {
       'process.env.STORAGE_BUCKET': JSON.stringify(process.env.STORAGE_BUCKET),
       'process.env.MESSAGING_SENDER_ID': JSON.stringify(process.env.MESSAGING_SENDER_ID),
       'process.env.APP_ID': JSON.stringify(process.env.APP_ID),
+      'process.env.MEASUREMENT_ID': JSON.stringify(process.env.MEASUREMENT_ID),
     }),
     new CleanWebpackPlugin({ verbose: true }),
     !isDevMode && new MiniCssExtractPlugin(),

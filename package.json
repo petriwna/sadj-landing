@@ -16,6 +16,7 @@
   "dependencies": {
     "cross-env": "7.0.3",
     "del": "6.1.1",
+    "firebase-tools": "^13.31.1",
     "sass": "1.69.5",
     "swiper": "^11.2.4"
   },
