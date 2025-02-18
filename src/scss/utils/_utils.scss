@@ -69,6 +69,19 @@
 
 .accent {
   color: var(--color-brand-yellow);
+
+  &--green {
+    font-weight: 700;
+    color: var(--color-brand-normal);
+  }
+}
+
+.allocated {
+  font-weight: 700;
+  padding: 0 3px;
+  color: var(--color-primary-light);
+  border-radius: 2px;
+  background-color: var(--color-brand-dark);
 }
 
 .border-right {
