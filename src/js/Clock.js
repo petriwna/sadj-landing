@@ -30,12 +30,12 @@ export class Clock {
     if (this.startPromotionElement.textContent === '' || this.endPromotionElement.textContent === '') {
       const currentDate = new Date();
       const startDate = new Date(currentDate.getTime() - 2 * 24 * 60 * 60 * 1000);
-      this.startPromotionElement.textContent = startDate.toLocaleDateString();
-      this.startPromotion = startDate.toLocaleDateString();
+      this.startPromotionElement.textContent = startDate.toLocaleDateString('uk-UA');
+      this.startPromotion = startDate.toLocaleDateString('uk-UA');
 
       const endDate = new Date(startDate.getTime() + 14 * 24 * 60 * 60 * 1000);
-      this.endPromotionElement.textContent = endDate.toLocaleDateString();
-      this.endPromotion = endDate.toLocaleDateString();
+      this.endPromotionElement.textContent = endDate.toLocaleDateString('uk-UA');
+      this.endPromotion = endDate.toLocaleDateString('uk-UA');
     } else {
       this.startPromotion = this.startPromotionElement.textContent;
       this.endPromotion = this.endPromotionElement.textContent;
@@ -71,11 +71,11 @@ export class Clock {
     const newStartDate = new Date(this.getPromoStartDate() + 7 * 24 * 60 * 60 * 1000);
     const newEndDate = new Date(this.getPromoEndDate() + 14 * 24 * 60 * 60 * 1000);
 
-    this.startPromotionElement.textContent = newStartDate.toLocaleDateString();
-    this.endPromotionElement.textContent = newEndDate.toLocaleDateString();
+    this.startPromotionElement.textContent = newStartDate.toLocaleDateString('uk-UA');
+    this.endPromotionElement.textContent = newEndDate.toLocaleDateString('uk-UA');
 
-    this.startPromotion = newStartDate.toLocaleDateString();
-    this.endPromotion = newEndDate.toLocaleDateString();
+    this.startPromotion = newStartDate.toLocaleDateString('uk-UA');
+    this.endPromotion = newEndDate.toLocaleDateString('uk-UA');
 
     const text = `Оновлення дати акції з ${this.startPromotion} до ${this.endPromotion}`;
     this.sendMessageTelegram(text);
