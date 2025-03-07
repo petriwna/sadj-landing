@@ -13,7 +13,6 @@
     "generate": "node generate-sitemap.js"
   },
   "dependencies": {
-    "@firebase/app-types": "^0.9.3",
     "cross-env": "7.0.3",
     "del": "6.1.1",
     "sass": "1.69.5",
