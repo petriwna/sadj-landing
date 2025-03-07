@@ -1,11 +1,6 @@
-import { AlertRenderer } from './AlertRenderer';
-import { sendError } from './utils';
-
 export class Clock {
   constructor() {
     this.clock = document.querySelector('.clock');
-
-    this.daysLeft = this.clock.querySelector('#days');
     this.hoursLeft = this.clock.querySelector('#hours');
     this.minutesLeft = this.clock.querySelector('#minutes');
     this.secondsLeft = this.clock.querySelector('#seconds');
@@ -27,19 +22,15 @@ export class Clock {
   }
 
   setPromoDate() {
-    if (this.startPromotionElement.textContent === '' || this.endPromotionElement.textContent === '') {
-      const currentDate = new Date();
-      const startDate = new Date(currentDate.getTime() - 2 * 24 * 60 * 60 * 1000);
-      this.startPromotionElement.textContent = startDate.toLocaleDateString('uk-UA');
-      this.startPromotion = startDate.toLocaleDateString('uk-UA');
+    const currentDate = new Date();
+    const startDate = new Date(currentDate.setHours(0, 0, 0, 0)); // Встановлюємо початок акції на сьогодні
+    this.startPromotionElement.textContent = startDate.toLocaleDateString('uk-UA');
+    this.startPromotion = startDate.toLocaleDateString('uk-UA');
 
-      const endDate = new Date(startDate.getTime() + 14 * 24 * 60 * 60 * 1000);
-      this.endPromotionElement.textContent = endDate.toLocaleDateString('uk-UA');
-      this.endPromotion = endDate.toLocaleDateString('uk-UA');
-    } else {
-      this.startPromotion = this.startPromotionElement.textContent;
-      this.endPromotion = this.endPromotionElement.textContent;
-    }
+    const endDate = new Date(startDate);
+    endDate.setDate(startDate.getDate() + 1); // Закінчення акції наступного дня
+    this.endPromotionElement.textContent = endDate.toLocaleDateString('uk-UA');
+    this.endPromotion = endDate.toLocaleDateString('uk-UA');
   }
 
   getPromoEndDate() {
@@ -49,7 +40,7 @@ export class Clock {
 
   getPromoStartDate() {
     const [day, month, year] = this.startPromotion.split('.');
-    return new Date(`${year}-${month}-${day}T23:59:59`).getTime();
+    return new Date(`${year}-${month}-${day}T00:00:00`).getTime();
   }
 
   updateCountdown() {
@@ -61,15 +52,14 @@ export class Clock {
     }
 
     const timeLeft = promoEndDate - now;
-    this.daysLeft.innerText = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
     this.hoursLeft.innerText = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     this.minutesLeft.innerText = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
     this.secondsLeft.innerText = Math.floor((timeLeft % (1000 * 60)) / 1000);
   }
 
   updatePromoDate() {
-    const newStartDate = new Date(this.getPromoStartDate() + 7 * 24 * 60 * 60 * 1000);
-    const newEndDate = new Date(this.getPromoEndDate() + 14 * 24 * 60 * 60 * 1000);
+    const newStartDate = new Date(this.getPromoStartDate() + 1 * 24 * 60 * 60 * 1000); // Новий старт акції
+    const newEndDate = new Date(newStartDate.getTime() + 1 * 24 * 60 * 60 * 1000); // Новий кінець акції
 
     this.startPromotionElement.textContent = newStartDate.toLocaleDateString('uk-UA');
     this.endPromotionElement.textContent = newEndDate.toLocaleDateString('uk-UA');

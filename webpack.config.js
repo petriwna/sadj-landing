@@ -201,6 +201,17 @@ module.exports = {
       },
       inject: 'body',
     }),
+    new HtmlWebpackPlugin({
+      template: './src/thank-you.html',
+      filename: 'thank-you.html',
+      minify: {
+        collapseWhitespace: false,
+        removeComments: false,
+        removeRedundantAttributes: false,
+        useShortDoctype: false,
+      },
+      inject: 'body',
+    }),
     new WebpackManifestPlugin(),
   ].filter(Boolean),
   devtool: 'source-map',

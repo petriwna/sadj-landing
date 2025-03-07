@@ -107,7 +107,7 @@ export class Form {
       if (!response.ok) {
         throw new Error(response.statusText);
       }
-      AlertRenderer.createAlert('ok', 'Дякуємо за вашу заявку!');
+      window.location.href = '/thank-you.html';
     } catch (error) {
       sendError(error, 'Заявка не відправлена!');
       AlertRenderer.createAlert('error', 'Заявка не відправлена! Спробуйте пізніше.');
