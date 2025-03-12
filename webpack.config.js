@@ -194,7 +194,7 @@ module.exports = {
       template: './src/index.html',
       filename: 'index.html',
       minify: {
-        collapseWhitespace: false,
+        collapseWhitespace: true,
         removeComments: false,
         removeRedundantAttributes: false,
         useShortDoctype: false,
@@ -205,7 +205,7 @@ module.exports = {
       template: './src/thank-you.html',
       filename: 'thank-you.html',
       minify: {
-        collapseWhitespace: false,
+        collapseWhitespace: true,
         removeComments: false,
         removeRedundantAttributes: false,
         useShortDoctype: false,
