@@ -13,7 +13,7 @@ export class Form {
     this.wareInput = this.form.querySelector('.ware');
     this.wareInput.value = this.wareInput.value
       ? this.wareInput.value
-      : 'Сковорода 26х6 чавунна з дерев\'яною ручкою та скляною кришкою (сотейник) Сітон';
+      : 'Набір посуду із червоної глини "Шашличниця" MAX';
     this.setupEventListeners();
   }
 
