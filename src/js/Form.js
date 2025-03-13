@@ -92,7 +92,6 @@ export class Form {
 
   async sendMessageTelegram(text) {
     try {
-      console.log('API URL:', process.env.API);
       const response = await fetch(process.env.API, {
         method: 'POST',
         headers: {
@@ -111,7 +110,6 @@ export class Form {
       window.location.href = '/thank-you.html';
     } catch (error) {
       sendError(error, 'Заявка не відправлена!');
-      console.error(error);
       AlertRenderer.createAlert('error', 'Заявка не відправлена! Спробуйте пізніше.');
     }
   }
