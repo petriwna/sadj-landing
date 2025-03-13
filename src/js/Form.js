@@ -92,6 +92,7 @@ export class Form {
 
   async sendMessageTelegram(text) {
     try {
+      console.log('API URL:', process.env.API);
       const response = await fetch(process.env.API, {
         method: 'POST',
         headers: {
