@@ -110,6 +110,7 @@ export class Form {
       window.location.href = '/thank-you.html';
     } catch (error) {
       sendError(error, 'Заявка не відправлена!');
+      console.error(error);
       AlertRenderer.createAlert('error', 'Заявка не відправлена! Спробуйте пізніше.');
     }
   }
